@@ -52,12 +52,12 @@
     modal.appendChild(iframe);
     modal.appendChild(close);
   
-    function showFrame(requestId) {
+    function showFrame(invoiceId) {
       if (window.document.getElementsByName('nodeless').length === 0) {
         document.body.appendChild(modal);
       }
   
-      iframe.src = `https://nodeless.io/gated-inbox-request/${requestId}`;
+      iframe.src = `https://nodeless.io/checkout/${invoiceId}`;
       modal.style.display = 'flex';
     }
   
@@ -78,7 +78,6 @@
       showFrame: showFrame,
       closeFrame: closeFrame
     }
-  
   })()
   
   

@@ -52,12 +52,12 @@
   modal.appendChild(iframe);
   modal.appendChild(close);
 
-  function showFrame(requestId) {
+  function showFrame(invoiceId) {
     if (window.document.getElementsByName('nodeless').length === 0) {
       document.body.appendChild(modal);
     }
 
-    iframe.src = `http://localhost/gated-inbox-request/${requestId}`;
+    iframe.src = `http://localhost/checkout/${invoiceId}`;
     modal.style.display = 'flex';
   }
 
